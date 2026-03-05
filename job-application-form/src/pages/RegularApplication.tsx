@@ -87,7 +87,6 @@ export default function RegularApplication() {
                                 Full Name <span className="text-red-500">*</span>
                             </label>
                             <Input
-                                placeholder="Jane Doe"
                                 aria-invalid={!!errors.name}
                                 {...register('name', { required: 'Name is required' })}
                             />
@@ -102,7 +101,6 @@ export default function RegularApplication() {
                             </label>
                             <Input
                                 type="email"
-                                placeholder="jane@example.com"
                                 aria-invalid={!!errors.email}
                                 {...register('email', {
                                     required: 'Email is required',
@@ -119,7 +117,7 @@ export default function RegularApplication() {
 
                         <div className="flex flex-col gap-1.5">
                             <label className="text-sm font-medium text-gray-900">
-                                Country <span className="text-red-500">*</span>
+                                Where are you currently based in? <span className="text-red-500">*</span>
                             </label>
                             <select
                                 className="border border-gray-300 flex h-9 w-full rounded-md bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-gray-900 disabled:cursor-not-allowed disabled:opacity-50"
@@ -188,12 +186,11 @@ export default function RegularApplication() {
 
                         <div className="flex flex-col gap-1.5">
                             <label className="text-sm font-medium text-gray-900">
-                                Expected Annual Salary (USD) <span className="text-red-500">*</span>
+                                Expected Annual Salary (SGD) <span className="text-red-500">*</span>
                             </label>
                             <Input
                                 type="number"
                                 min={0}
-                                placeholder="80000"
                                 aria-invalid={!!errors.expected_salary}
                                 {...register('expected_salary', {
                                     required: 'Expected salary is required',
@@ -211,7 +208,6 @@ export default function RegularApplication() {
                                 Notice Period <span className="text-red-500">*</span>
                             </label>
                             <Input
-                                placeholder="e.g. 1 month, 2 weeks, Immediately"
                                 aria-invalid={!!errors.notice_period}
                                 {...register('notice_period', { required: 'Notice period is required' })}
                             />
@@ -226,7 +222,6 @@ export default function RegularApplication() {
                                 Availability to Start <span className="text-red-500">*</span>
                             </label>
                             <Input
-                                placeholder="e.g. 1 March 2025, Within 2 weeks"
                                 aria-invalid={!!errors.availability}
                                 {...register('availability', { required: 'Availability is required' })}
                             />
