@@ -1,5 +1,5 @@
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -56,8 +56,8 @@ export default function RegularApplication() {
     }
 
     return (
-        <div className="min-h-screen bg-white">
-            <div className="max-w-2xl mx-auto px-8 py-16">
+        <div className="min-h-screen bg-white flex justify-center">
+            <div className="w-full max-w-2xl px-8 py-16">
                 <div className="flex justify-center mb-12">
                     <img src="/m-daqlogo2.png" alt="mDAQ" className="h-10 w-auto" />
                 </div>
@@ -262,7 +262,8 @@ export default function RegularApplication() {
                     <div>
                         <Button
                             type="submit"
-                            className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-2 rounded-full h-auto"
+                            disabled={!slug}
+                            className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-2 rounded-full h-auto disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             Submit Application
                         </Button>
