@@ -1,5 +1,6 @@
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import type { SubmitHandler } from 'react-hook-form'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
