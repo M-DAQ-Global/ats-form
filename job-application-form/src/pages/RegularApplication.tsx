@@ -5,7 +5,6 @@ import type { SubmitHandler } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import countries from '@/assets/countries.json'
-// test
 
 interface IFormInput {
     name: string
@@ -51,6 +50,9 @@ export default function RegularApplication() {
 
         await fetch(`${baseUrl}/api/apply`, {
             method: 'POST',
+            headers: {
+                Authorization: `Bearer ${import.meta.env.VITE_API_AUTH_TOKEN}`,
+            },
             body: formData,
         })
 
